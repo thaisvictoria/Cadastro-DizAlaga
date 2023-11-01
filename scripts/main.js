@@ -54,29 +54,6 @@ function mascaraTelefone(campoTelefone) {
     return true;
   }
 }
-function limpar() {
-  if (
-    confirm(
-      "Atenção! você deseja mesmo  apagar todos os dados desse formulárioi? se você deletar todos os dados não será mais possível recuperá-los "
-    )
-  ) {
-    document.getElementById("nome").value = "";
-    document.getElementById("sobrenome").value = "";
-    document.getElementById("rg").value = "";
-    document.getElementById("cpf").value = "";
-    document.getElementById("cep").value = "";
-    document.getElementById("rua").value = "";
-    document.getElementById("numero").value = "";
-    document.getElementById("bairro").value = "";
-    document.getElementById("complemento").value = "";
-    document.getElementById("cidade").value = "";
-    document.getElementById("celular").value = "";
-    document.getElementById("telefone").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("nascimento").value = "";
-    document.getElementById("cep").value = "";
-  }
-}
 
 function mascaraCep(campoCep) {
   var cep = campoCep.value;
