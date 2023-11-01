@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,56 +11,49 @@
 <h1>Cadastro </h1>
 <p>Os campos com <span class="red">*</span> são obrigatórios</p>
     <form action="">
-
-<fieldset>
-    <legend>Dados pessoais</legend><label for="nome"><span class="red">*</span>Nome</label>
-<input type = "text" name = "nome" id = "nome" placeholder = "Digite o seu nome" required >
-<label for="sobrenome">Sobrenome</label>
-<input type = "text" name = "sobrenome" id = "sobrenome"placeholder = "Digite seu sobrenome" >
-<label for="genero"><span class="red">*</span>Gênero</label>
-<label for="masculino">Masculino</label>
-        <input type = "radio" name = "genero" value = "masculino"  id = "masculino"> 
-    <label for="feminino" >Feminino</label> 
-    <input type = "radio" name = "genero" value = "feminino"  id = "feminino">
-    <label for="feminino" >Outros</label> 
-    <input type = "radio" name = "genero" value = "outros"  id = "outros">
-</fieldset>
+<label for="nome"><span class="red">*</span>Nome</label>
+<input type = "text" name = "nome" id = "nome" required >
+<label for="sobrenome"><span class="red">*</span>Sobrenome</label>
+<input type = "text" name = "sobrenome" id = "sobrenome" required>
+<label for="genero"><span class="red">*</span>Gênero:</label>
+<select class="genero">
+    <option value="feminino">Feminino</option>
+    <option value="masculino">Masculino</option>
+    <option value="outros">Opção 3</option>
+</select>
 <br>
 
 
-    
-<fieldset>
-    <legend>Dados de endereço</legend><label for="cep"><span class="red">*</span>CEP</label>
-<input type = "tel" name = "cep" id = "cep" onkeypress = "mascaraCep(this)"  placeholder="Digite o CEP" onblur="pesquisacep(this.value)" required >
-<label for="rua"><span class="red">*</span>Rua</label>
-<input type = "text" name = "rua" id = "rua" required placeholder="Digite a rua">
-<label for="numero"><span class="red">*</span>Número</label >
-<input type = "text" name = "numero" id = "numero" required placeholder = "Digite o número da rua" >
-<label for="bairro"><span class="red">*</span>Bairro</label>
-<input type = "text" name = "bairro" id = "bairro" required placeholder = "Digite o bairro" >
+<label for="cep"><span class="red">*</span>CEP</label>
+<input type = "tel" name = "cep" id = "cep" onkeypress = "mascaraCep(this)"  onblur="pesquisacep(this.value)" required >
+<label for="rua"><span class="red">*</span>Rua:</label>
+<input type = "text" name = "rua" id = "rua" required >
+<label for="numero"><span class="red">*</span>Número:</label >
+<input type = "text" name = "numero" id = "numero" required>
+<label for="bairro"><span class="red">*</span>Bairro:</label>
+<input type = "text" name = "bairro" id = "bairro" required >
 <label for="complemento">Complemento:</label>
-<input type = "text" name = "complemento" id = "complemento" placeholder = "Digite um complemento" >
+<input type = "text" name = "complemento" id = "complemento"  >
 <label for="cidade"><span class="red">*</span>Cidade:</label>
-<input type = "text" name = "cidade" id = "cidade" placeholder = "Digite a cidade" required>
+<input type = "text" name = "cidade" id = "cidade" required>
 <label for="estado"><span class="red">*</span>Estado:</label>
-<input type = "text" name = "estado" id = "estado" placeholder = "Digite o estado" required>
-</fieldset>
+<input type = "text" name = "estado" id = "estado" required>
 <br >
-
-
-
-
-<fieldset>
-<legend>Dados de contato</legend><label for="telefonefixo">Telefone Fixo:</label>
-<input type = "tel" name = "telefone" id = "telefone" onkeypress = "mascaraTelefone(this)" placeholder = "Digite o telefone">
+<label for="telefonefixo">Telefone Fixo:</label>
+<input type = "tel" name = "telefone" id = "telefone" onkeypress = "mascaraTelefone(this)" >
 <label for="celular"><span class="red">*</span>Celular:</label>
-<input type = "tel" name = "celular" id = "celular" required onkeypress = "mascaraCelular(this)" placeholder = "Digite o número de celular" > 
+<input type = "tel" name = "celular" id = "celular" required onkeypress = "mascaraCelular(this)" > 
 <label for="email"><span class="red">*</span>E-mail</label>
-<input type = "email" name = "email" id = "email" placeholder="Digite seu e-mail" >    
+<input type = "email" name = "email" id = "email">    
 </fieldset>
-<br>
+<br><br>
 
-<input type = "submit" onclick = "validar()" value = "Cadastrar"      >    
+<div class="buttonCadastrar">
+  <input type="submit" onclick="validar()" value="Cadastrar" id="buttonInput">
+</div>
+    
+
+  
 
     </form>
     </div>
